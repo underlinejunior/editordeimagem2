@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Editor de imagens</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container disable">
+        <div class="top">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">FILTROS</label>
+                    <div class="slider">
+                        <label for="brightness">Brilho</label><input type="range" id="brightness" value="100" min="0"
+                            max="300" oninput="brightnessValue()">
+                        <label for="saturation">Saturação</label><input type="range" id="saturation" value="0" min="0"
+                            max="300" oninput="saturationValue()">
+                        <label for="inversion">Inversão</label><input type="range" id="inversion" value="0" min="0"
+                            step="100" max="100" oninput="inversionValue()">
+                        <label for="huerotate">Cor</label><input type="range" id="hueRotate" value="0" min="0" max="360"
+                            oninput="hueRotateValue()">
+                        <label for="contrast">Contraste</label><input type="range" id="contrast" value="100" min="0" max="500"
+                            oninput="contrastValue()">
+                    </div>
+                </div>
+
+            </div>
+            <div class="preview-img">
+                <img id="preview" alt="Selecione uma imagem">
+                <canvas class="canvas2 disabled"></canvas>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="reset-filter">Resetar</button>
+            <input type="file" class="file-input" accept="image/*" hidden>
+            <button class="choose-img">Abrir</button>
+            <button class="save-img">Salvar</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

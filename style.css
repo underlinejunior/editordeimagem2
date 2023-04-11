@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #191b1c;
+}
+
+.container {
+  width: 80vw;
+  padding: 30px 35px 35px;
+  background: rgb(159, 159, 159);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container.disable .editor-panel,
+.container.disable .controls .reset-filter,
+.container.disable .controls .save-img,
+.container.disable .controls .segment,
+.container.disable .controls .save-segment {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.editor-panel {
+  padding: 15px 20px;
+  width: 20vw;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.editor-panel .title {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.editor-panel,
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.editor-panel button {
+  outline: none;
+  height: 40px;
+  font-size: 14px;
+  color: #525a61;
+  background: #fff;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  border: 1px solid #aaa;
+}
+
+.editor-panel .filter {
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.slider label {
+  padding-top: 1rem;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.preview-img {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  align-self: center;
+}
+
+.preview-img img {
+  max-width: 60vw;
+  max-height: 40vw;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.canvas2 {
+  display: block;
+  border: 2px dotted white;
+}
+.canvas2.disabled{
+  display: none;
+
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.controls button {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  border: none;
+  border-radius: 1rem;
+  transition: all 500ms ease-in-out;
+}
+
+.controls button:hover {
+  box-shadow: 5px 5px 5px gray;
+  color: white
+}
+
+.choose-img {
+  background-color: #1d85c1;
+}
+
+.save-img {
+  background-color: rgb(50, 159, 255);
+}
+
+.segment{
+  background-color: rgb(147, 0, 0);
+}
